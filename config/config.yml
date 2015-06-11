@@ -24,7 +24,7 @@ enforce_ssl: false
 
 # The email address which email notifications
 # will be sent from.
-email_from: errbit@<%= ENV['APP_HOST'] %>
+email_from: <%= errbit@ + ENV['APP_HOST'].to_s %>
 
 # If you turn on this option, email_at_notices can be
 # configured on a per app basis, at the App edit page
