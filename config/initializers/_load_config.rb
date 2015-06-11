@@ -45,6 +45,7 @@ unless defined?(Errbit::Config)
     config = YAML.load_file(config_file)
     config.merge!(config.delete(Rails.env)) if config.has_key?(Rails.env)
     config.each do |k,v|
+      v = v.is_a?(String) ? ERB.new(v).result : v
       Errbit::Config.send("#{k}=", v)
     end
   # Show message if we are not running tests, not running on Heroku, and config.yml doesn't exist.
