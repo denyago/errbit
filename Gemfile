@@ -129,6 +129,8 @@ group :heroku, :production do
   gem 'unicorn', :require => false
 end
 
+gem 'rails_12factor', group: :heroku
+
 gem 'execjs'
 gem 'therubyracer', :platform => :ruby  # C Ruby (MRI) or Rubinius, but NOT Windows
 gem 'uglifier',     '>= 1.0.3'
