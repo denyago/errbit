@@ -95,7 +95,7 @@ deployment:
 # Callback URL: http://errbit.example.com/users/auth/github
 #
 # After you have registered your app, copy your Client ID and Secret key below.
-github_authentication: false
+github_authentication: true
 github_client_id: <%= ENV['GITHUB_CLIENT_ID'] %>
 github_secret: <%= ENV['GITHUB_SECRET'] %>
 # GitHub Permissions to request from user
