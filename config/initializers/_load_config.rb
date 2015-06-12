@@ -30,11 +30,12 @@ unless defined?(Errbit::Config)
 
   Errbit::Config.smtp_settings = {
     :address        => ENV['SMTP_SERVER'] || 'smtp.sendgrid.net',
-    :port           => ENV['SMTP_PORT']   || 25,
+    :port           => ENV['SMTP_PORT']   || 587,
     :authentication => :plain,
+    :enable_starttls_auto => true,
     :user_name      => ENV['SMTP_USERNAME']   || ENV['SENDGRID_USERNAME'],
     :password       => ENV['SMTP_PASSWORD']   || ENV['SENDGRID_PASSWORD'],
-    :domain         => ENV['SMTP_DOMAIN'] || ENV['SENDGRID_DOMAIN'] || ENV['ERRBIT_EMAIL_FROM'].split('@').last
+    :domain         => ENV['SMTP_DOMAIN']     || ENV['SENDGRID_DOMAIN'] || ENV['ERRBIT_EMAIL_FROM'].split('@').last
   }
 
 
