@@ -48,7 +48,7 @@ gem 'pivotal-tracker'
 # Fogbugz
 gem 'ruby-fogbugz', :require => 'fogbugz'
 # Github Issues
-gem 'octokit', '~> 2.0'
+gem 'octokit', '~> 4.0'
 # Gitlab
 gem 'gitlab', '~> 3.0.0'
 
