@@ -1,5 +1,5 @@
 configure_db_pool_for_sidekiq = Proc.new do
-  config = Rails.application.config.database_configuration[Rails.env]
+  config = ActiveRecord::Base.configurations[Rails.env]
   config['pool'] = Sidekiq.options[:concurrency] + 2
   ActiveRecord::Base.establish_connection(config)
 end
